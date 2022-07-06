@@ -12,9 +12,9 @@
       Demo
     </a> -->
     <span> | </span>
-    <!-- <a href="https://{your-url-to-the-solution}">
+    <a href="https://github.com/islandskan/devchallenges-responsive-checkout">
       Solution
-    </a> -->
+    </a>
     <span> | </span>
     <a href="https://devchallenges.io/challenges/0J1NxxGhOUYVqihwegfO">
       Challenge
@@ -97,6 +97,5 @@ $ npm start
 
 ## Contact
 
--   Website [your-website.com](https://{your-web-site-link})
--   GitHub [@your-username](https://{github.com/your-usermame})
--   Twitter [@your-twitter](https://{twitter.com/your-username})
+-   GitHub [@islandskan](https://github.com/islandskan)
+-   LinkedIn [Sigridur Eggertsdottir](https://www.linkedin.com/in/sigridureggertsdottir/)
