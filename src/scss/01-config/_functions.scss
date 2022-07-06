@@ -1,0 +1,87 @@
+@use 'variables' as *;
+
+/*
+txt-7xl = 36px/2.25rem
+txt-6xl = 34px/2.125rem
+txt-5xl = 32px/2rem
+txt-4xl = 30px/1.875rem
+txt-3xl = 28px/1.75rem
+txt-2xl = 26px/1.625rem
+txt-xxl = 24px/1.5rem
+txt-xl = 22px/1.375rem
+txt-lg = 20px/1.25rem
+txt-md = 18px/1.125rem
+base = 16px/1rem
+txt-sm = 14px/0.875rem
+txt-xs = 12px/0.75rem
+txt-xxs = 10px/0.625rem
+*/
+
+// Small font-sizes
+
+// 14px/0.875rem
+@function txt-sm($base) {
+    @return $base * 0.875;
+}
+
+// 12px/0.75rem
+@function txt-xs($base) {
+    @return $base * 0.75;
+}
+
+// 10px/0.625rem
+@function txt-xxs($base) {
+    @return $base * 0.625;
+}
+
+// Large font-size
+
+// 18px/1.125rem
+@function txt-md($base) {
+    @return $base * 1.125;
+}
+
+// 20px/1.25rem
+@function txt-lg($base) {
+    @return $base * 1.25;
+}
+
+// 22px/1.375rem
+@function txt-xl($base) {
+    @return $base * 1.375;
+}
+
+// 24px/1.5rem
+@function txt-xxl($base) {
+    @return $base * 1.5;
+}
+
+// 26px/1.625rem
+@function txt-2xl($base) {
+    @return $base * 1.625;
+}
+
+// 28px/1.75rem
+@function txt-3xl($base) {
+    @return $base * 1.75;
+}
+
+// 30px/1.875rem
+@function txt-4xl($base) {
+    @return $base * 1.875;
+}
+
+// 32px/2rem
+@function txt-5xl($base) {
+    @return $base * 2;
+}
+
+// 34px/2.125rem
+@function txt-6xl($base) {
+    @return $base * 2.125;
+}
+
+// 36px/2.25rem
+@function txt-7xl($base) {
+    @return $base * 2.25;
+}
