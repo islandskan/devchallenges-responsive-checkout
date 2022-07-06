@@ -1,0 +1,9 @@
+figure {
+    width: 10em;
+    height: 7.75em;
+    padding: 0 1.125em;
+    & img {
+        max-width: 100%;
+        border-radius: 13px;
+    }
+}
