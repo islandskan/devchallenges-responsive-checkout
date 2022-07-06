@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+
+// Font family and font weight
+$montserrat: 'Montserrat', sans-serif;
+$semibold: 600;
+$bold: 700;
+
+// Colors
+$headinggray: #4e5150; // use for checkout heading, item titles, and old price
+$boxgray: #f2f2f2; // use for background of the item box
+$orange: #f2994a; // use for new price and button
+$grayinput: #828282; // use for input borders, decrease, increase, input icons, contact placeholder fields
+$inputbox: #e0e0e0; // use for number input buttons, and select option button
+$darktxt: #333333; // use for input values, shipping price, total price, contact information heading, contact info input placeholders, contact info input values, and full name value
+$gray4: #bdbdbd; // use for lines between shipping and total, and footer text
+$graylabel: #4f4f4f; // use for the contact info labels
+
+// Spacings
+$img-padding: 1.2em; // padding-x for images inside image parent containers
+$input-padding: 0.7em; // padding for icons and placeholder text inside input fields
+$label-margin: 0.3em; // margin-bottom for form labels
+$item-margin: 1.7em; // margin-bottom for item cards
