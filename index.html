@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1,
+  maximum-scale=5"
+        />
+
+        <link rel="icon" href="/public/img/devchallenges.png" />
+
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="https://devchallenges.io/"
+        />
+        <link rel="stylesheet" href="/public/styles/minified/styles.min.css" />
+        <title>Checkout</title>
+    </head>
+    <body>
+        <div class="body-container">
+            <h1>Checkout</h1>
+            <section class="box box__item">
+                <div class="card">
+                    <figure>
+                        <img src="/public/img/photo1.png" alt="backpack" />
+                    </figure>
+                    <h3 class="card__title">Vintage Backpack</h3>
+                    <div class="card__price">
+                        <p class="current-price">$54.99</p>
+                        <p class="old-price">$94.99</p>
+                    </div>
+                    <form class="num-input">
+                        <input type="number" name="num-1" id="num-1" />
+                    </form>
+                </div>
+
+                <div class="card">
+                    <figure>
+                        <img src="/public/img/photo2.png" alt="shoes" />
+                    </figure>
+                    <h3 class="card__title">Levi Shoes</h3>
+                    <div class="card__price">
+                        <p class="current-price">$74.99</p>
+                        <p class="old-price">$124.99</p>
+                    </div>
+                    <form class="num-input">
+                        <input type="number" name="num-1" id="num-1" />
+                    </form>
+                </div>
+                <div class="cost">
+                    <div class="shipping">
+                        <p>Shipping</p>
+                        <p id="shipping-cost">$19</p>
+                    </div>
+                    <div class="total">
+                        <p>Total</p>
+                        <p id="total-cost">$148</p>
+                    </div>
+                </div>
+            </section>
+            <section class="box box__form">
+                <form>
+                    <div>
+                        <h4>Contact information</h4>
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Enter your email..."
+                            required
+                        />
+                        <label for="phone">Phone</label>
+                        <input
+                            type="tel"
+                            name="phone"
+                            id="phone"
+                            placeholder="Enter your phone..."
+                        />
+                    </div>
+                    <div>
+                        <h4>Shipping address</h4>
+                        <label for="name">Full name</label>
+                        <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Your full name..."
+                            required
+                        />
+                        <label for="address">Address</label>
+                        <input
+                            type="text"
+                            name="address"
+                            id="address"
+                            placeholder="Your address..."
+                            required
+                        />
+                        <label for="country">Country</label>
+                        <select name="country" id="country" required>
+                            <option disabled selected value="">
+                                Your country...
+                            </option>
+                            <option value="usa">USA</option>
+                            <option value="sweden">Sweden</option>
+                            <option value="denmark">Denmark</option>
+                        </select>
+                        <label for="postal">Postal code</label>
+                        <input
+                            type="text"
+                            name="postal"
+                            id="postal"
+                            placeholder="Your postal code..."
+                            required
+                        />
+                    </div>
+                    <input type="checkbox" name="save-data" id="save-data" />
+                    <label for="save-data"
+                        >Save this information for next time</label
+                    >
+                    <button type="submit" class="btn">Continue</button>
+                </form>
+            </section>
+            <footer class="footer">
+                <p class="footer__txt">
+                    created by
+                    <a
+                        href="https://github.com/islandskan"
+                        class="footer__txt--link"
+                        >islandskan</a
+                    >
+                    - devChallenges.io
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>
