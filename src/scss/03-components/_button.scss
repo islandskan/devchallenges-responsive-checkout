@@ -1,0 +1,10 @@
+@use '../01-config/' as *;
+
+.btn {
+    background-color: $orange;
+    cursor: pointer;
+    border: none;
+    border-radius: txt-xs($base);
+    width: 166px;
+    height: 54px;
+}
