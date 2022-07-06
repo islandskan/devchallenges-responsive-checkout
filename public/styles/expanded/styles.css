@@ -236,6 +236,16 @@ label {
   color: #b63d0e;
 }
 
+figure {
+  width: 10em;
+  height: 7.75em;
+  padding: 0 1.125em;
+}
+figure img {
+  max-width: 100%;
+  border-radius: 13px;
+}
+
 .btn {
   background-color: #f2994a;
   cursor: pointer;
