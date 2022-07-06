@@ -1,5 +1,91 @@
 @use '../01-config/' as *;
 
+html {
+    font-family: $montserrat;
+    font-weight: $semibold;
+}
+
 h1 {
+    color: $headinggray;
+    font-size: txt-2xl($base);
+}
+
+h3 {
+    font-size: txt-xs($base);
+    color: $headinggray;
+}
+
+.current-price,
+.cost,
+h4 {
+    font-size: txt-sm($base);
+}
+
+.current-price {
+    color: $orange;
+}
+
+.old-price {
+    font-size: txt-xxs($base);
+    color: $headinggray;
+    text-decoration: line-through;
+}
+
+.num-input input {
+    font-size: $base;
+    color: $darktxt;
+}
+
+.cost,
+h4 {
+    color: $darktxt;
+}
+
+label {
+    font-size: txt-xxs($base);
+    color: $graylabel;
+}
+
+.box__form input,
+.box__form select {
+    font-size: txt-xs($base);
     font-family: $montserrat;
 }
+
+.input-name {
+    color: $darktxt;
+    &::placeholder {
+        color: $darktxt;
+    }
+}
+
+.btn {
+    font-size: $base;
+    font-family: $montserrat;
+    color: white;
+    line-height: txt-lg($base);
+}
+
+.footer__txt {
+    font-size: txt-sm($base);
+    text-align: center;
+    color: $gray4;
+    &--link,
+    &--link:link {
+        font-weight: $bold;
+        text-decoration: none;
+        &:visited {
+            color: $visitedlink;
+        }
+    }
+}
+
+// .shipping:first-child,
+// .total:first-child {
+//     text-align: start;
+// }
+
+// .shipping:nth-child(2),
+// .total:nth-child(2) {
+//     text-align: end;
+// }
