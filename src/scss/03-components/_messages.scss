@@ -1,0 +1,27 @@
+@use '../01-config/' as *;
+
+.message {
+    // opacity: 0;
+
+    background-color: $grayinput;
+    border-radius: 4px;
+    color: white;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+.success {
+    @extend .message;
+    background-color: $successgreen;
+}
+
+.invalid {
+    @extend .message;
+    background-color: $invalidred;
+}
+
+.show {
+    opacity: 1;
+}
