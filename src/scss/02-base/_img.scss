@@ -1,8 +1,10 @@
 figure {
     margin-right: 1.25em;
-    width: 10em;
+    width: 7.6em;
+
     & img {
         border-radius: 13px;
         max-width: 100%;
+        display: block;
     }
 }
