@@ -1,0 +1,18 @@
+@use '../01-config/' as *;
+
+.card {
+    display: flex;
+    margin-bottom: 1.75em;
+    &-num {
+        padding-top: 2px;
+    }
+    &__price {
+        display: flex;
+        margin-bottom: 1.375em;
+        margin-top: 0.6em;
+        width: fit-content;
+        & .current-price {
+            margin-right: 0.75em;
+        }
+    }
+}
