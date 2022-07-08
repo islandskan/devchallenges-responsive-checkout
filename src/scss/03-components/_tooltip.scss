@@ -1,0 +1,45 @@
+@use '../01-config/' as *;
+
+.tooltip {
+    display: inline-block;
+    position: relative;
+    &__txt {
+        font-size: txt-xxs($base);
+        background-color: $orangetransparent;
+        border-radius: 4px;
+        bottom: 0;
+        color: white;
+        left: 0;
+        opacity: 0;
+        padding: 4px 6px;
+        position: absolute;
+        text-align: center;
+        transition: opacity 0.4s, transform 0.3s;
+        z-index: 1;
+        &::after {
+            border-color: $orangetransparent transparent transparent transparent;
+            border-style: solid;
+            border-width: 4px; // specifies the size of the arrow
+            content: '';
+            left: 50%;
+            margin-left: -4px; // if I change the border with, change this value as well. This keeps the arrow centered
+            position: absolute;
+            top: 100%;
+        }
+    }
+    // Use JS to add class name .active
+    .active &__txt {
+        opacity: 1;
+        transform: translateY(-22px);
+    }
+
+    // Remove this when I use JS to show the tooltip
+    &:hover &__txt {
+        opacity: 1;
+        transform: translateY(-22px);
+    }
+}
+
+.test {
+    @extend .tooltip;
+}
