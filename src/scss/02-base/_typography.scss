@@ -11,8 +11,9 @@ h1 {
 }
 
 h3 {
-    font-size: txt-xs($base);
     color: $headinggray;
+    font-size: txt-xs($base);
+    line-height: txt-sm($base);
 }
 
 .current-price,
@@ -26,14 +27,19 @@ h4 {
 }
 
 .old-price {
-    font-size: txt-xxs($base);
     color: $headinggray;
+    font-size: txt-xxs($base);
     text-decoration: line-through;
 }
 
+.current-price,
+.old-price {
+    line-height: 17px;
+}
+
 .num-input input {
-    font-size: $base;
     color: $darktxt;
+    font-size: $base;
 }
 
 .cost,
@@ -42,14 +48,14 @@ h4 {
 }
 
 label {
-    font-size: txt-xxs($base);
     color: $graylabel;
+    font-size: txt-xxs($base);
 }
 
 .box__form input,
 .box__form select {
-    font-size: txt-xs($base);
     font-family: $montserrat;
+    font-size: txt-xs($base);
 }
 
 .input-name {
@@ -60,16 +66,16 @@ label {
 }
 
 .btn {
-    font-size: $base;
-    font-family: $montserrat;
     color: white;
+    font-family: $montserrat;
+    font-size: $base;
     line-height: txt-lg($base);
 }
 
 .footer__txt {
+    color: $gray4;
     font-size: txt-sm($base);
     text-align: center;
-    color: $gray4;
     &--link,
     &--link:link {
         font-weight: $bold;
