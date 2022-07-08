@@ -2,9 +2,16 @@
 
 .btn {
     background-color: $orange;
-    cursor: pointer;
-    border: none;
     border-radius: txt-xs($base);
-    width: 166px;
+    border: none;
+    cursor: pointer;
     height: 54px;
+    width: 166px;
+    &__content {
+        display: inline-block;
+        min-width: 83px;
+        &--txt {
+            margin-right: 4px;
+        }
+    }
 }
