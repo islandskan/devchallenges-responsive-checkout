@@ -1,0 +1,13 @@
+@use '../01-config/' as *;
+
+.box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5em;
+    &__item {
+        background-color: $boxgray;
+        border-radius: 12px;
+        margin-top: 1.25em;
+        padding: 1.875em 1.625em 1em 1.625em;
+    }
+}
