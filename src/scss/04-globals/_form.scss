@@ -1,0 +1,64 @@
+@use '../01-config/' as *;
+
+.form {
+    & h4 {
+        margin-bottom: txt-xs($base);
+    }
+    & input {
+        margin-bottom: $base;
+    }
+    & label {
+        margin-bottom: 5px;
+    }
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+    }
+    &__shipping {
+        display: flex;
+        flex-direction: column;
+        .country-postal {
+            margin-bottom: $base;
+            display: flex;
+            justify-content: space-between;
+            & label {
+                margin-bottom: 5px;
+            }
+            & input,
+            & select {
+                margin-bottom: $base;
+            }
+            &__container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                &:first-child {
+                    margin-right: txt-xl($base);
+                }
+            }
+        }
+    }
+    &__check {
+        display: flex;
+        align-items: center;
+        & input,
+        & label {
+            margin: 0;
+        }
+        & input {
+            margin-right: 8px;
+            height: $base;
+            width: $base;
+        }
+    }
+    &__btn {
+        display: flex;
+        justify-content: end;
+        margin-top: txt-lg($base);
+    }
+    & div:nth-child(1) {
+        margin-bottom: 2.8em;
+    }
+}
