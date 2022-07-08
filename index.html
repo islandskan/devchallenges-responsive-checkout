@@ -27,13 +27,22 @@
                         <img src="/public/img/photo1.png" alt="backpack" />
                     </figure>
                     <div class="card-num">
-                        <h3 class="card__title">Vintage Backpack</h3>
-                        <div class="card__price">
-                            <p class="current-price">$54.99</p>
-                            <p class="old-price">$94.99</p>
+                        <div>
+                            <h3 class="card__title">Vintage Backpack</h3>
+                            <div class="card__price">
+                                <p class="current-price">$54.99</p>
+                                <p class="old-price">$94.99</p>
+                            </div>
                         </div>
                         <form class="num-input">
-                            <input type="number" name="num-1" id="num-1" />
+                            <label for="backpack"></label>
+                            <input
+                                type="number"
+                                id="backpack"
+                                name="backpack"
+                                value="1"
+                                min="1"
+                            />
                         </form>
                     </div>
                 </div>
@@ -43,13 +52,22 @@
                         <img src="/public/img/photo2.png" alt="shoes" />
                     </figure>
                     <div class="card-num">
-                        <h3 class="card__title">Levi Shoes</h3>
-                        <div class="card__price">
-                            <p class="current-price">$74.99</p>
-                            <p class="old-price">$124.99</p>
+                        <div>
+                            <h3 class="card__title">Levi Shoes</h3>
+                            <div class="card__price">
+                                <p class="current-price">$74.99</p>
+                                <p class="old-price">$124.99</p>
+                            </div>
                         </div>
                         <form class="num-input">
-                            <input type="number" name="num-1" id="num-1" />
+                            <label for="shoes"></label>
+                            <input
+                                type="number"
+                                id="shoes"
+                                name="shoes"
+                                value="1"
+                                min="1"
+                            />
                         </form>
                     </div>
                 </div>
@@ -157,10 +175,10 @@
             </section>
 
             <!--  Tooltip, place above input fields  -->
-            <div class="tooltip">
+            <!-- <div class="tooltip">
                 Something to hover
                 <span class="tooltip__txt">This is a hint</span>
-            </div>
+            </div> -->
 
             <!--  Submission messages  -->
             <!--  Use JS to change the class name to either .success or .invalid  -->
