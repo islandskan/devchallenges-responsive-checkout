@@ -26,28 +26,32 @@
                     <figure>
                         <img src="/public/img/photo1.png" alt="backpack" />
                     </figure>
-                    <h3 class="card__title">Vintage Backpack</h3>
-                    <div class="card__price">
-                        <p class="current-price">$54.99</p>
-                        <p class="old-price">$94.99</p>
+                    <div class="card-num">
+                        <h3 class="card__title">Vintage Backpack</h3>
+                        <div class="card__price">
+                            <p class="current-price">$54.99</p>
+                            <p class="old-price">$94.99</p>
+                        </div>
+                        <form class="num-input">
+                            <input type="number" name="num-1" id="num-1" />
+                        </form>
                     </div>
-                    <form class="num-input">
-                        <input type="number" name="num-1" id="num-1" />
-                    </form>
                 </div>
 
                 <div class="card">
                     <figure>
                         <img src="/public/img/photo2.png" alt="shoes" />
                     </figure>
-                    <h3 class="card__title">Levi Shoes</h3>
-                    <div class="card__price">
-                        <p class="current-price">$74.99</p>
-                        <p class="old-price">$124.99</p>
+                    <div class="card-num">
+                        <h3 class="card__title">Levi Shoes</h3>
+                        <div class="card__price">
+                            <p class="current-price">$74.99</p>
+                            <p class="old-price">$124.99</p>
+                        </div>
+                        <form class="num-input">
+                            <input type="number" name="num-1" id="num-1" />
+                        </form>
                     </div>
-                    <form class="num-input">
-                        <input type="number" name="num-1" id="num-1" />
-                    </form>
                 </div>
                 <div class="cost">
                     <div class="shipping">
@@ -63,11 +67,16 @@
             <!-- Item box ends -->
 
             <!-- Contact information and shipping address start here -->
-            <section class="box box__form">
-                <form>
-                    <div>
+            <section class="box">
+                <form class="form">
+                    <div class="form__contact">
                         <h4>Contact information</h4>
-                        <label for="email">Email</label>
+                        <label for="email" class="tooltip"
+                            >Email
+                            <span class="tooltip__txt"
+                                >This is a hint</span
+                            ></label
+                        >
                         <input
                             type="email"
                             name="email"
@@ -83,7 +92,7 @@
                             placeholder="Enter your phone..."
                         />
                     </div>
-                    <div>
+                    <div class="form__shipping">
                         <h4>Shipping address</h4>
                         <label for="name">Full name</label>
                         <input
@@ -102,31 +111,62 @@
                             placeholder="Your address..."
                             required
                         />
-                        <label for="country">Country</label>
-                        <select name="country" id="country" required>
-                            <option disabled selected value="">
-                                Your country...
-                            </option>
-                            <option value="usa">USA</option>
-                            <option value="sweden">Sweden</option>
-                            <option value="denmark">Denmark</option>
-                        </select>
-                        <label for="postal">Postal code</label>
-                        <input
-                            type="text"
-                            name="postal"
-                            id="postal"
-                            placeholder="Your postal code..."
-                            required
-                        />
+                        <div class="country-postal">
+                            <section class="country-postal__container">
+                                <label for="country">Country</label>
+                                <select name="country" id="country" required>
+                                    <option disabled selected value="">
+                                        Your country...
+                                    </option>
+                                    <option value="usa">USA</option>
+                                    <option value="sweden">Sweden</option>
+                                    <option value="denmark">Denmark</option>
+                                </select>
+                            </section>
+                            <section class="country-postal__container">
+                                <label for="postal">Postal code</label>
+                                <input
+                                    type="text"
+                                    name="postal"
+                                    id="postal"
+                                    placeholder="Your postal code..."
+                                    required
+                                />
+                            </section>
+                        </div>
                     </div>
-                    <input type="checkbox" name="save-data" id="save-data" />
-                    <label for="save-data"
-                        >Save this information for next time</label
-                    >
-                    <button type="submit" class="btn">Continue</button>
+                    <div class="form__check">
+                        <input
+                            type="checkbox"
+                            name="save-data"
+                            id="save-data"
+                        />
+                        <label for="save-data"
+                            >Save this information for next time</label
+                        >
+                    </div>
+                    <div class="form__btn">
+                        <button type="submit" class="btn">
+                            <span class="btn__content">
+                                <span class="btn__content--txt">Continue</span
+                                ><span class="loader"></span>
+                            </span>
+                        </button>
+                    </div>
                 </form>
             </section>
+
+            <!--  Tooltip, place above input fields  -->
+            <div class="tooltip">
+                Something to hover
+                <span class="tooltip__txt">This is a hint</span>
+            </div>
+
+            <!--  Submission messages  -->
+            <!--  Use JS to change the class name to either .success or .invalid  -->
+            <!--  Also use JS to change the text node inside the div  -->
+            <div class="message" id="message">A dynamic message</div>
+
             <footer class="footer">
                 <p class="footer__txt">
                     created by
