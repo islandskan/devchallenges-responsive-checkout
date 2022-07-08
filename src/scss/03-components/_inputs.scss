@@ -1,0 +1,13 @@
+@use '../01-config/' as *;
+
+// Number input, to increase or decrease number of items
+.num-input {
+    & input {
+        width: 122px;
+        height: 50px;
+        font-family: $montserrat;
+        text-align: center;
+    }
+    &__custom {
+    }
+}
