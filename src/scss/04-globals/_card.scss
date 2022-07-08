@@ -2,17 +2,37 @@
 
 .card {
     display: flex;
-    margin-bottom: 1.75em;
+    margin-bottom: txt-2xl($base);
     &-num {
-        padding-top: 2px;
-    }
-    &__price {
         display: flex;
-        margin-bottom: 1.375em;
-        margin-top: 0.6em;
-        width: fit-content;
-        & .current-price {
-            margin-right: 0.75em;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 txt-lg($base);
+
+        & .card__price {
+            display: flex;
+            margin-top: 0.6em;
+            width: fit-content;
+            & .current-price {
+                margin-right: 0.75em;
+            }
         }
+    }
+    &__title {
+        margin-bottom: txt-xxs($base);
+    }
+}
+
+.cost {
+    display: flex;
+    flex-direction: column;
+    height: 9em;
+    justify-content: end;
+    .shipping,
+    .total {
+        border-top: 1px solid $gray4;
+        display: flex;
+        justify-content: space-between;
+        padding: txt-xs($base) 0;
     }
 }
