@@ -1,64 +1,71 @@
 @use '../01-config/' as *;
 
 .form {
-    & h4 {
-        margin-bottom: txt-xs($base);
-    }
-    & input {
-        margin-bottom: $base;
-    }
-    & label {
-        margin-bottom: 5px;
-    }
     &__contact {
-        display: flex;
-        flex-direction: column;
-        align-content: space-between;
+        margin-bottom: 45px;
     }
     &__shipping {
-        display: flex;
-        flex-direction: column;
-        .country-postal {
-            margin-bottom: $base;
-            display: flex;
-            justify-content: space-between;
-            & label {
-                margin-bottom: 5px;
-            }
-            & input,
-            & select {
-                margin-bottom: $base;
-            }
-            &__container {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-
-                &:first-child {
-                    margin-right: txt-xl($base);
-                }
-            }
-        }
+        margin-bottom: 16px;
     }
     &__check {
+        margin-bottom: 20px;
         display: flex;
         align-items: center;
-        & input,
-        & label {
+        & input[type='checkbox'] {
+            opacity: 0;
+            width: 0;
             margin: 0;
         }
-        & input {
-            margin-right: 8px;
-            height: $base;
-            width: $base;
+        & input[type='checkbox'] + label {
+            cursor: pointer;
         }
+        & input[type='checkbox'] + label:before {
+            font: var(--fa-font-solid);
+            content: '\f00c';
+            border: 1px solid $grayinput;
+            border-radius: 4px;
+            padding: 2px;
+            margin-right: 8px;
+            color: transparent;
+        }
+        & input[type='checkbox']:checked + label:before {
+            background-color: $orange;
+            border-color: $orange;
+            color: white;
+        }
+    }
+    & h4 {
+        margin-bottom: 12px;
     }
     &__btn {
         display: flex;
-        justify-content: end;
-        margin-top: txt-lg($base);
+        justify-content: flex-end;
     }
-    & div:nth-child(1) {
-        margin-bottom: 2.8em;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 16px;
+    & label {
+        margin-bottom: 5px;
+    }
+    & .icon {
+        color: $grayinput;
+        position: absolute;
+        left: 10px;
+        top: 28px;
+    }
+}
+
+.country-postal {
+    display: flex;
+    justify-content: space-between;
+    & fieldset {
+        width: 100%;
+        &:first-child {
+            margin-right: 23px;
+        }
     }
 }

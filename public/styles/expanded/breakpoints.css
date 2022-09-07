@@ -1,0 +1,5 @@
+@media (min-width: 700px) {
+  .box__item {
+    border: 1px solid red;
+  }
+}/*# sourceMappingURL=breakpoints.css.map */

@@ -15,6 +15,10 @@
             type="image/x-icon"
             href="https://devchallenges.io/"
         />
+        <script
+            src="https://kit.fontawesome.com/9877bc6c1f.js"
+            crossorigin="anonymous"
+        ></script>
         <link rel="stylesheet" href="/public/styles/minified/styles.min.css" />
         <title>Checkout</title>
     </head>
@@ -34,16 +38,12 @@
                                 <p class="old-price">$94.99</p>
                             </div>
                         </div>
-                        <form class="num-input">
-                            <label for="backpack"></label>
-                            <input
-                                type="number"
-                                id="backpack"
-                                name="backpack"
-                                value="1"
-                                min="1"
-                            />
-                        </form>
+                        <!-- Num input -->
+                        <div class="num">
+                            <button class="num__btn decrease">-</button>
+                            <span class="num__input">1</span>
+                            <button class="num__btn increase">+</button>
+                        </div>
                     </div>
                 </div>
 
@@ -59,16 +59,12 @@
                                 <p class="old-price">$124.99</p>
                             </div>
                         </div>
-                        <form class="num-input">
-                            <label for="shoes"></label>
-                            <input
-                                type="number"
-                                id="shoes"
-                                name="shoes"
-                                value="1"
-                                min="1"
-                            />
-                        </form>
+                        <!-- Num input -->
+                        <div class="num">
+                            <button class="num__btn decrease">-</button>
+                            <span class="num__input">1</span>
+                            <button class="num__btn increase">+</button>
+                        </div>
                     </div>
                 </div>
                 <div class="cost">
@@ -78,6 +74,7 @@
                     </div>
                     <div class="total">
                         <p>Total</p>
+                        <!--  Add dynamic value with JS, based on value from number input fields  -->
                         <p id="total-cost">$148</p>
                     </div>
                 </div>
@@ -85,54 +82,76 @@
             <!-- Item box ends -->
 
             <!-- Contact information and shipping address start here -->
-            <section class="box">
+            <section class="box box__contact">
                 <form class="form">
                     <div class="form__contact">
                         <h4>Contact information</h4>
-                        <label for="email" class="tooltip"
-                            >Email
-                            <span class="tooltip__txt"
-                                >This is a hint</span
-                            ></label
-                        >
-                        <input
-                            type="email"
-                            name="email"
-                            id="email"
-                            placeholder="Enter your email..."
-                            required
-                        />
-                        <label for="phone">Phone</label>
-                        <input
-                            type="tel"
-                            name="phone"
-                            id="phone"
-                            placeholder="Enter your phone..."
-                        />
+                        <fieldset>
+                            <label for="email">Email</label>
+                            <i class="fa-solid fa-envelope icon"></i>
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="Enter your email..."
+                                required
+                            />
+                        </fieldset>
+                        <fieldset>
+                            <label for="phone">Phone</label>
+                            <i class="fa-sharp fa-solid fa-phone icon"></i>
+                            <input
+                                type="tel"
+                                name="phone"
+                                id="phone"
+                                placeholder="Enter your phone..."
+                            />
+                        </fieldset>
                     </div>
                     <div class="form__shipping">
                         <h4>Shipping address</h4>
-                        <label for="name">Full name</label>
-                        <input
-                            type="text"
-                            name="name"
-                            id="name"
-                            placeholder="Your full name..."
-                            class="input-name"
-                            required
-                        />
-                        <label for="address">Address</label>
-                        <input
-                            type="text"
-                            name="address"
-                            id="address"
-                            placeholder="Your address..."
-                            required
-                        />
+                        <fieldset>
+                            <label for="name">Full name</label>
+                            <i
+                                class="fa-sharp fa-solid fa-circle-user icon"
+                            ></i>
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                placeholder="Your full name..."
+                                class="input-name"
+                                required
+                            />
+                        </fieldset>
+                        <fieldset>
+                            <label for="address">Address</label>
+                            <i class="fa-solid fa-house icon"></i>
+                            <input
+                                type="text"
+                                name="address"
+                                id="address"
+                                placeholder="Your address..."
+                                required
+                            />
+                        </fieldset>
+                        <fieldset>
+                            <label for="city">City</label>
+                            <i class="fa-solid fa-city icon"></i>
+                            <input
+                                type="text"
+                                name="city"
+                                id="city"
+                                placeholder="Your city..."
+                                required
+                            />
+                        </fieldset>
+
                         <div class="country-postal">
-                            <section class="country-postal__container">
+                            <fieldset>
                                 <label for="country">Country</label>
-                                <select name="country" id="country" required>
+                                <i class="fa-solid fa-city icon"></i>
+                                <select name="country" required>
                                     <option disabled selected value="">
                                         Your country...
                                     </option>
@@ -140,9 +159,10 @@
                                     <option value="sweden">Sweden</option>
                                     <option value="denmark">Denmark</option>
                                 </select>
-                            </section>
-                            <section class="country-postal__container">
+                            </fieldset>
+                            <fieldset>
                                 <label for="postal">Postal code</label>
+                                <i class="fa-solid fa-address-card icon"></i>
                                 <input
                                     type="text"
                                     name="postal"
@@ -150,7 +170,7 @@
                                     placeholder="Your postal code..."
                                     required
                                 />
-                            </section>
+                            </fieldset>
                         </div>
                     </div>
                     <div class="form__check">
@@ -167,23 +187,13 @@
                         <button type="submit" class="btn">
                             <span class="btn__content">
                                 <span class="btn__content--txt">Continue</span
-                                ><span class="loader"></span>
                             </span>
                         </button>
                     </div>
                 </form>
             </section>
 
-            <!--  Tooltip, place above input fields  -->
-            <!-- <div class="tooltip">
-                Something to hover
-                <span class="tooltip__txt">This is a hint</span>
-            </div> -->
 
-            <!--  Submission messages  -->
-            <!--  Use JS to change the class name to either .success or .invalid  -->
-            <!--  Also use JS to change the text node inside the div  -->
-            <div class="message" id="message">A dynamic message</div>
 
             <footer class="footer">
                 <p class="footer__txt">
