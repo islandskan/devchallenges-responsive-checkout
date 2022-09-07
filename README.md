@@ -8,9 +8,9 @@
 
 <div align="center">
   <h3>
-    <!-- <a href="https://{your-demo-link.your-domain}">
+    <a href="https://islandskan-responsive-checkout.netlify.app/">
       Demo
-    </a> -->
+    </a>
     <span> | </span>
     <a href="https://github.com/islandskan/devchallenges-responsive-checkout">
       Solution
