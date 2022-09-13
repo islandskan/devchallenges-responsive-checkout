@@ -28,6 +28,7 @@
 
 -   [Overview](#overview)
 -   [Features](#features)
+-   [Issues to Solve](#issues-to-solve)
 -   [Contact](#contact)
 -   [Acknowledgements](#acknowledgements)
 
@@ -40,11 +41,28 @@
 
 <!-- Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering: -->
 
+My submission to project 6/8, as part of Devchallenge's learning path 'Responsive Web Developer'. The project features a fictious, responsive checkout page dealing with forms and inputs.
+The challenge was to create a checkout page follwoing the provided Figma design.
+
+User stories:
+
+-   I can see a page following the given design
+-   I can input email, phone, full name, address, city, country, and postal code
+-   I can input the number of items
+-   When I click submit button or press enter, I can see a warning if validation fails
+-   When I click submit button or press enter, I can see a successful alert if validation succeeds.
+
 ## Features
 
-<!-- List the features of your application or follow the template. Don't share the figma file here :) -->
+### Issues to Solve
 
-This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/0J1NxxGhOUYVqihwegfO) was to build an application to complete the given user stories.
+-   Change the number input(when increasing or decreasing the number of items), to a real input number-type.
+-   Solve how to style the number input to look like the design
+-   I would like to increase the total price based on the number of items
+-   I would like to add tooltips with hint to the input field if user has provided the wrong input
+-   I would like to display a custom error message
+-   I would like to display a loading animation on the button when the submit button is clicked
+-   I would like to display a success message if all of the input were successfully submited
 
 ## How To Use
 
