@@ -58,11 +58,11 @@ User stories:
 
 -   [x] Change the number input(when increasing or decreasing the number of items), to a real input number-type.
 -   [x] Solve how to style the number input to look like the design
--   I would like to increase the total price based on the number of items
--   I would like to add tooltips with hint to the input field if user has provided the wrong input
--   I would like to display a custom error message
--   I would like to display a loading animation on the button when the submit button is clicked
--   I would like to display a success message if all of the input were successfully submited
+-   [] I would like to increase the total price based on the number of items
+-   [] I would like to add tooltips with hint to the input field if user has provided the wrong input
+-   [] I would like to display a custom error message
+-   [] I would like to display a loading animation on the button when the submit button is clicked
+-   [] I would like to display a success message if all of the input were successfully submited
 
 ## How To Use
 
