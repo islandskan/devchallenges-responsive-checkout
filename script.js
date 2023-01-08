@@ -1,5 +1,3 @@
-// 1. cost of products
-
 // currency is in US Dollars
 const vintageBackpack = {
     name: 'Vintage Backpack',
@@ -34,10 +32,28 @@ const leviShoes = {
 const SHIPPING = 19;
 
 // 2. Function to increment or decrement
+const numInputs = document.querySelectorAll('.num');
+for (const num of numInputs) {
+    num.addEventListener('click', (e) => {
+        if (e.target.matches('.decrease')) {
+            if (e.target.nextElementSibling) {
+                e.target.nextElementSibling.value--;
+            }
+        } else if (e.target.matches('.increase')) {
+            if (e.target.previousElementSibling) {
+                e.target.previousElementSibling.value++;
+            }
+        }
+        return;
+    });
+}
 
-/*
-div class num
-    button class=decrease
-    span class=num__input = the value here
-    button class=increase
-*/
+// .addEventListener('click', function (e) {
+//     console.log(e.target.getAttribute('class') + ' is clicked');
+
+//     const target = e.target;
+
+//     if (target.matches('button.decrease')) {
+//         console.log(target);
+//     }
+// });
