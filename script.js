@@ -1,3 +1,7 @@
+const SHIPPING = 19;
+const totalEl = document.querySelector('#total-cost');
+const numInputsValue = document.querySelectorAll('.num__input');
+
 // currency is in US Dollars
 const vintageBackpack = {
     name: 'Vintage Backpack',
@@ -29,31 +33,45 @@ const leviShoes = {
     },
 };
 
-const SHIPPING = 19;
-
 // 2. Function to increment or decrement
 const numInputs = document.querySelectorAll('.num');
 for (const num of numInputs) {
     num.addEventListener('click', (e) => {
+        if (num.previousElementSibling.children) {
+            let productName =
+                num.previousElementSibling.children.item(0).textContent;
+            console.log(productName);
+        }
         if (e.target.matches('.decrease')) {
             if (e.target.nextElementSibling) {
                 e.target.nextElementSibling.value--;
+            }
+            if (e.target.nextElementSibling.value < 1) {
+                e.target.nextElementSibling.value = 1;
+                return;
             }
         } else if (e.target.matches('.increase')) {
             if (e.target.previousElementSibling) {
                 e.target.previousElementSibling.value++;
             }
         }
+
         return;
     });
 }
 
-// .addEventListener('click', function (e) {
-//     console.log(e.target.getAttribute('class') + ' is clicked');
+// function to add or sub from total cost
 
-//     const target = e.target;
+const getTotalCost = (product, numValue) => {
+    const totalCost = product.getCurrentPrice * numValue + SHIPPING;
+    return totalCost.toFixed(2);
+};
 
-//     if (target.matches('button.decrease')) {
-//         console.log(target);
-//     }
-// });
+const addTotalCost = (cost) => {
+    totalEl.textContent = cost;
+};
+
+addTotalCost(`$${getTotalCost(vintageBackpack, 2)}`);
+
+console.log(`$${getTotalCost(vintageBackpack, 2)}`);
+console.log(`$${getTotalCost(leviShoes, 4)}`);
