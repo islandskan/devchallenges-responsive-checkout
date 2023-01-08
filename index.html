@@ -20,6 +20,7 @@
             crossorigin="anonymous"
         ></script>
         <link rel="stylesheet" href="/public/styles/minified/styles.min.css" />
+        <script src="./script.js" defer></script>
         <title>Checkout</title>
     </head>
     <body>
@@ -39,9 +40,19 @@
                             </div>
                         </div>
                         <!-- Num input -->
-                        <div class="num">
+                        <div class="num" aria-label="quantity">
                             <button class="num__btn decrease">-</button>
-                            <span class="num__input">1</span>
+                            <input
+                                type="tel"
+                                name="vintage-backpack"
+                                id="vintage-backpack"
+                                class="num__input"
+                                value="1"
+                                tabindex="-1"
+                                aria-hidden="true"
+                                readonly
+                            />
+                            <label for="vintage-backpack"></label>
                             <button class="num__btn increase">+</button>
                         </div>
                     </div>
@@ -60,9 +71,19 @@
                             </div>
                         </div>
                         <!-- Num input -->
-                        <div class="num">
+                        <div class="num" aria-label="quantity">
                             <button class="num__btn decrease">-</button>
-                            <span class="num__input">1</span>
+                            <input
+                                type="tel"
+                                name="levi-shoes"
+                                id="levi-shoes"
+                                class="num__input"
+                                value="1"
+                                tabindex="-1"
+                                aria-hidden="true"
+                                readonly
+                            />
+                            <label for="levi-shoes"></label>
                             <button class="num__btn increase">+</button>
                         </div>
                     </div>
@@ -186,14 +207,12 @@
                     <div class="form__btn">
                         <button type="submit" class="btn" id="submit">
                             <span class="btn__content">
-                                <span class="btn__content--txt">Continue</span
+                                <span class="btn__content--txt">Continue</span>
                             </span>
                         </button>
                     </div>
                 </form>
             </section>
-
-
 
             <footer class="footer">
                 <p class="footer__txt">
