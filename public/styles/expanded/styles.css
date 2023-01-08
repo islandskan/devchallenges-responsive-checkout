@@ -289,13 +289,26 @@ label {
   justify-content: space-between;
   background-color: white;
 }
+.num__input {
+  background-color: transparent;
+  border: none;
+  width: 42px;
+  text-align: center;
+}
+.num__input[type=tel]:focus, .num__input[type=tel]:focus-visible, .num__input[type=tel]:focus-within {
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
 .num__btn {
   border: none;
   background-color: #e0e0e0;
   border-radius: 4px;
-  height: 20px;
-  width: 20px;
-  padding: 3px;
+  height: 26px;
+  width: 26px;
+  padding: 4px;
   color: #828282;
   font-size: calc(1rem + 2px);
   display: flex;
@@ -304,6 +317,10 @@ label {
   cursor: pointer;
 }
 .num__btn:active {
+  background-color: #f2994a;
+  color: white;
+}
+.num__btn:focus-within {
   background-color: #f2994a;
   color: white;
 }

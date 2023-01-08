@@ -19,13 +19,25 @@
     align-items: center;
     justify-content: space-between;
     background-color: white;
+    &__input {
+        background-color: transparent;
+        border: none;
+        width: 42px;
+        text-align: center;
+        &[type='tel']:focus,
+        &[type='tel']:focus-visible,
+        &[type='tel']:focus-within {
+            outline: none;
+            user-select: none;
+        }
+    }
     &__btn {
         border: none;
         background-color: $inputbox;
         border-radius: 4px;
-        height: 20px;
-        width: 20px;
-        padding: 3px;
+        height: 26px;
+        width: 26px;
+        padding: 4px;
         color: $grayinput;
         font-size: calc($base + 2px);
         display: flex;
@@ -33,6 +45,10 @@
         justify-content: center;
         cursor: pointer;
         &:active {
+            background-color: $orange;
+            color: white;
+        }
+        &:focus-within {
             background-color: $orange;
             color: white;
         }
