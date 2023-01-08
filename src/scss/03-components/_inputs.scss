@@ -1,5 +1,14 @@
 @use '../01-config/' as *;
 
+a:focus,
+button:focus,
+input:focus,
+input[name='save-data']:focus,
+select:focus {
+    border: none;
+    outline: 3px solid $orange;
+}
+
 .form {
     & input,
     & select {
@@ -8,6 +17,13 @@
         padding: 12px 10px 12px 39px;
         font-family: $montserrat;
     }
+}
+
+input:focus,
+input[name='save-data']:focus,
+label[for='save-data']:focus,
+select:focus {
+    border: 1px solid transparent;
 }
 
 .num {

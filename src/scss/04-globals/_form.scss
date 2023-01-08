@@ -43,9 +43,11 @@
     }
 }
 
-fieldset {
+fieldset:not(.form__check) {
     display: flex;
     flex-direction: column;
+}
+fieldset {
     position: relative;
     margin-bottom: 16px;
     & label {
@@ -60,12 +62,17 @@ fieldset {
 }
 
 .country-postal {
-    display: flex;
-    justify-content: space-between;
-    & fieldset {
-        width: 100%;
-        &:first-child {
-            margin-right: 23px;
-        }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 18px;
+    & fieldset:first-of-type {
+        grid-column: 1 / span 1;
     }
+    & fieldset:nth-of-type(2) {
+        grid-column: 2 / span 1;
+    }
+}
+
+select {
+    background-color: white;
 }
